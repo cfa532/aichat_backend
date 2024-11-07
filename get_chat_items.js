@@ -1,9 +1,10 @@
 ((request, args)=>{
     try {
         const CHAT_HISTORY_KEY = "CHAT_HISTORY_"            // set of chat I
-        let caseId = request["caseid"]
+        let caseId = request["caseid"].toString()
         let userMid = request["mid"]
         let pageSize = request["pagesize"] ? request["pagesize"] : 30
+        
         let mmsid = lapi.MMOpen("", userMid, "last")
         let keys = lapi.Hkeys(mmsid, CHAT_HISTORY_KEY+caseId)
             .sort((a, b) => b-a)

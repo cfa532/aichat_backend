@@ -5,7 +5,7 @@
          * Each item is a Field-value pair.
          */
         const CHAT_CASE_KEY = "CHAT_CASE_LIST"
-        let userMid = request["mid"]
+        let userMid = request["mid"].toString()
         let mmsid = lapi.MMOpen("", userMid, "last")
         let fvs = lapi.Hgetall(mmsid, CHAT_CASE_KEY)
         let allCases = fvs.map( e => e.Value)

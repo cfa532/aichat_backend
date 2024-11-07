@@ -6,7 +6,7 @@
          */
         const CHAT_CASE_KEY = "CHAT_CASE_LIST"
         let userMid = request["mid"]
-        let caseId = request["caseid"]
+        let caseId = request["caseid"].toString()
         let authSid = lapi.BELoginAsAuthor()
 
         let mmsid = lapi.MMOpen(authSid, userMid, "cur")
