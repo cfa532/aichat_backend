@@ -10,7 +10,7 @@
         let fvs = lapi.Hgetall(mmsid, CHAT_CASE_KEY)
         let allCases = fvs.map( e => e.Value)
         console.log(JSON.stringify(allCases))
-        return allCases
+        return allCases ? allCases : []
     } catch(e) {
         console.error("get_cases error:", JSON.stringify(request), e)
     }
