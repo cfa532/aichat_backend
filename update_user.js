@@ -1,5 +1,5 @@
 ((request, args)=>{
-    // Update user data upon login. Authentication server will provide username.
+    // Update user data upon login. Client will provide username.
     // create local user mid with the given username.
     try {
         const USER_DATA_KEY = "user_data_key"
